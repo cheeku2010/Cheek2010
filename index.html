@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="Ez1MTNF-SvsIOWtnK88F1kXY7Hx4RtAG0UG39Wy4qjE" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vintage Technical Service</title>
+
+  <!-- Internal CSS -->
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+    }
+
+    /* Hero Section */
+    #hero {
+      background-color: orange;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    #hero img {
+      max-width: 200px;
+      margin: auto;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #0056b3;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Welcome Section */
+    #welcome {
+      text-align: center;
+      padding: 20px;
+      background-color: beige;
+      border: 5px solid;
+      border-image: linear-gradient(45deg, orange, darkblue) 1;
+      margin: 20px;
+      animation: move-border 3s linear infinite;
+    }
+
+    @keyframes move-border {
+      0% { border-image-source: linear-gradient(45deg, orange, darkblue); }
+      100% { border-image-source: linear-gradient(-45deg, orange, darkblue); }
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 20px;
+      background-color: white;
+      text-align: center;
+    }
+
+    /* Services Section */
+    #services {
+      padding: 20px;
+      background-color: white;
+      text-align: center;
+    }
+
+    .service-img {
+      margin: 10px;
+      width: 200px;
+      height: 150px;
+      border: 2px solid #ccc;
+    }
+
+    /* Button */
+    button {
+      padding: 10px 20px;
+      background-color: orange;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkorange;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section id="hero"> 
+    <img src= IMG_1161.jpeg
+  </section>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact Info</a>
+    <a href="#services">Services</a>
+  </nav>
+
+  <!-- Welcome Section -->
+  <section id="welcome">
+    <h1>Welcome to Vintage Technical Service</h1>
+    <p>Your trusted partner in technical services. Explore our services and contact us for more details.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Info</h2>
+    <p>Email: contact@vintagetechnical.com</p>
+    <p>Phone: 050 5885502</p>
+    <p>Instagram: @VintageTechnical</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <button id="showImages">Show Services</button>
+    <div id="serviceImages" style="display: none;">
+      <img class="service-img" src="IMG_1162.jpeg" alt="Service 1">
+      <img class="service-img" src="IMG_1163.jpeg"  alt="Service 2">
+      <img class="service-img" src="IMG_1164.jpeg" alt="Service 3">
+      <img class="service-img" src="IMG_1165.jpeg" alt= "Service 4">
+      <img class="service-img" src="IMG_1166.jpeg" alt= "Service 5">
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    // Get the button and service images container
+    const showImagesButton = document.getElementById('showImages');
+    const serviceImagesContainer = document.getElementById('serviceImages');
+
+    // Add event listener to the button
+    showImagesButton.addEventListener('click', function() {
+      // Toggle the display of the service images
+      if (serviceImagesContainer.style.display === 'none') {
+        serviceImagesContainer.style.display = 'block';
+      } else {
+        serviceImagesContainer.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
